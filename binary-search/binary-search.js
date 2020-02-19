@@ -15,8 +15,8 @@ const binarySearch = (array, target) => {
   let splitArr = split(array);
   let firstHalf = splitArr[0];
   let secondHalf = splitArr[1];
-  console.log('firsthalf:', firstHalf);
-  console.log('secondhalf:', secondHalf);
+  //   console.log('firsthalf:', firstHalf);
+  //   console.log('secondhalf:', secondHalf);
 
   if (target === secondHalf[0] || target === firstHalf[0]) {
     return true;
@@ -30,6 +30,30 @@ const binarySearch = (array, target) => {
     }
   }
 };
+
+// const binarySearch = function(
+//   array,
+//   target,
+//   startPointer = Math.floor(array.length / 2),
+//   endPointer = array.length - 1
+// ) {
+//   if (target === array[startPointer]) {
+//     return true;
+//   } else {
+//     if (target > array[startPointer]) {
+//       startPointer = Math.floor((endPointer - startPointer) / 2);
+//       //   console.log("if target is in second half:", pointer)
+//       return binarySearch(array, target, startPointer, endPointer);
+//     } else if (target < array[startPointer]) {
+//       endPointer = startPointer;
+//       startPointer = Math.floor((endPointer + startPointer) / 2);
+//       //   console.log("if target is in first half:", pointer)
+//       return binarySearch(array, target, startPointer, endPointer);
+//     } else {
+//       return false;
+//     }
+//   }
+// };
 
 /*
 	EXTRA CREDIT:
@@ -48,4 +72,3 @@ module.exports = binarySearch;
 // 	return binarySearch(secondHalf, target);
 //   } else {
 // 	return false;
-//   }
